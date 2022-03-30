@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+:root {
+  --primary-color: #f60f20;
+  --secondary-color: #1b206e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #111;
+}
+
+html,
+body {
+  height: 100vh;
+  position: relative;
+}
+
+/* header */
+.logo {
+  position: absolute;
+  z-index: 10;
+  font-size: 2.4rem;
+  font-weight: 600;
+  top: 7%;
+  left: 7%;
+}
+
+.toggle {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  width: 8vh;
+  height: 8vh;
+  background-color: var(--primary-color);
+  background-image: url("../images/menu.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 5vh;
+}
+
+.toggle.active {
+  background-image: url("../images/close.png");
+}
+
+/* section */
+section {
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+  z-index: 0;
+}
+
+.home-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+}
+
+.home-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.home-content h1 {
+  font-size: 2rem;
+  font-weight: 550;
+  position: absolute;
+  top: 30%;
+  left: 7%;
+}
+
+.home-content p {
+  position: absolute;
+  top: 45%;
+  left: 7%;
+  width: 40%;
+}
+
+.home-content a {
+  display: inline-block;
+  position: absolute;
+  top: 60%;
+  left: 7%;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  font-weight: 500;
+  color: #fff;
+}
+
+/* navigation */
+.navigation {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: -5;
+  background-color: #fff;
+}
+
+.navigation.active {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  background-color: #fff;
+}
+
+.navigation .pages {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-size: 2.3rem;
+  font-weight: 300;
+  line-height: 55px;
+}
+
+.navigation .pages a {
+  text-decoration: none;
+}
+
+.navigation .social-bar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.navigation .social-bar ul li:first-child {
+  margin: 0 6px;
+}
+
+.navigation .social-bar ul li a img {
+  transform: scale(0.5);
+}
+
+.navigation .social-bar > a img {
+  transform: scale(0.4);
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
